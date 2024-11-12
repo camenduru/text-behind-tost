@@ -7,6 +7,7 @@ import numpy as np
 
 from nodes import load_custom_node
 from nodes import NODE_CLASS_MAPPINGS
+from comfy_extras import nodes_mask
 
 load_custom_node("/content/ComfyUI/custom_nodes/ComfyUI_BiRefNet_ll")
 load_custom_node("/content/ComfyUI/custom_nodes/add_text_2_img")
@@ -15,7 +16,7 @@ LoadImage = NODE_CLASS_MAPPINGS["LoadImage"]()
 AutoDownloadBiRefNetModel = NODE_CLASS_MAPPINGS["AutoDownloadBiRefNetModel"]()
 RembgByBiRefNet = NODE_CLASS_MAPPINGS["RembgByBiRefNet"]()
 AddText = NODE_CLASS_MAPPINGS["AddText"]()
-ImageCompositeMasked = NODE_CLASS_MAPPINGS["ImageCompositeMasked"]()
+ImageCompositeMasked = nodes_mask.NODE_CLASS_MAPPINGS["ImageCompositeMasked"]()
 
 with torch.inference_mode():
     model = AutoDownloadBiRefNetModel.load_model("General", "AUTO")[0]
