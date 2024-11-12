@@ -9,6 +9,7 @@
         "paper": "https://arxiv.org/abs/2401.03407",
         "code": "https://github.com/ZhengPeng7/BiRefNet",
         "page": "https://www.birefnet.top/",
+        "jupyter": "https://github.com/camenduru/text-behind-tost",
         "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/text-behind-image.ipynb",
         "tags": [
           "Image to Image"
