@@ -21,6 +21,8 @@ https://arxiv.org/abs/2401.03407
 https://www.birefnet.top/
 
 ### 🖼 Output
+![flj6kn](https://github.com/user-attachments/assets/71ada268-55d4-440b-894a-ad30d6d79744)
+![8xoh1d](https://github.com/user-attachments/assets/70fe0b92-61eb-4a9c-9e5d-b6708a323940)
 
 ### 🏢 Sponsor
 [https://runpod.io](https://runpod.io?ref=iqi9iy8y)
