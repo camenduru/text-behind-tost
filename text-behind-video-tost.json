@@ -1,0 +1,411 @@
+{
+  "last_node_id": 143,
+  "last_link_id": 257,
+  "nodes": [
+    {
+      "id": 90,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        -5370,
+        323
+      ],
+      "size": [
+        315,
+        146
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 223
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 256
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 158,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            257
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ]
+    },
+    {
+      "id": 112,
+      "type": "AddText",
+      "pos": [
+        -5854,
+        263
+      ],
+      "size": [
+        405.8782958984375,
+        292
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 254
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            223
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AddText"
+      },
+      "widgets_values": [
+        "Karina",
+        79,
+        371,
+        131,
+        "Custom",
+        "#eb34bd",
+        0,
+        0,
+        "#000000",
+        "/content/ComfyUI/models/fonts/BIG JOHN.otf"
+      ]
+    },
+    {
+      "id": 138,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -6353,
+        288
+      ],
+      "size": [
+        247.455078125,
+        680.3645629882812
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            254,
+            255,
+            256
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "test2.mp4",
+        "force_rate": 0,
+        "force_size": "Disabled",
+        "custom_width": 512,
+        "custom_height": 512,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "force_rate": 0,
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "select_every_nth": 1,
+            "filename": "test2.mp4",
+            "type": "input",
+            "format": "video/mp4"
+          },
+          "muted": false
+        }
+      }
+    },
+    {
+      "id": 75,
+      "type": "AutoDownloadBiRefNetModel",
+      "pos": [
+        -6075,
+        634
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "links": [
+            124
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AutoDownloadBiRefNetModel"
+      },
+      "widgets_values": [
+        "General",
+        "AUTO"
+      ]
+    },
+    {
+      "id": 76,
+      "type": "RembgByBiRefNet",
+      "pos": [
+        -5714,
+        632
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "link": 124
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 255
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            158
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RembgByBiRefNet"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 143,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        -5007,
+        228
+      ],
+      "size": [
+        382.8033752441406,
+        968.9837646484375
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 257
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 30,
+        "loop_count": 0,
+        "filename_prefix": "TextBehindImage",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "TextBehindImage_00010.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 30
+          },
+          "muted": false
+        }
+      }
+    }
+  ],
+  "links": [
+    [
+      124,
+      75,
+      0,
+      76,
+      0,
+      "BiRefNetMODEL"
+    ],
+    [
+      158,
+      76,
+      1,
+      90,
+      2,
+      "MASK"
+    ],
+    [
+      223,
+      112,
+      0,
+      90,
+      0,
+      "IMAGE"
+    ],
+    [
+      254,
+      138,
+      0,
+      112,
+      0,
+      "IMAGE"
+    ],
+    [
+      255,
+      138,
+      0,
+      76,
+      1,
+      "IMAGE"
+    ],
+    [
+      256,
+      138,
+      0,
+      90,
+      1,
+      "IMAGE"
+    ],
+    [
+      257,
+      90,
+      0,
+      143,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.1918176537727456,
+      "offset": [
+        6509.73797283882,
+        -131.52599381978422
+      ]
+    }
+  },
+  "version": 0.4
+}

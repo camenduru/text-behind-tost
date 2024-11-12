@@ -1,0 +1,320 @@
+{
+  "last_node_id": 145,
+  "last_link_id": 261,
+  "nodes": [
+    {
+      "id": 75,
+      "type": "AutoDownloadBiRefNetModel",
+      "pos": [
+        -6074,
+        663
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "links": [
+            124
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AutoDownloadBiRefNetModel"
+      },
+      "widgets_values": [
+        "General",
+        "AUTO"
+      ]
+    },
+    {
+      "id": 76,
+      "type": "RembgByBiRefNet",
+      "pos": [
+        -5704,
+        670
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "link": 124
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 260
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            158
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RembgByBiRefNet"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 144,
+      "type": "LoadImage",
+      "pos": [
+        -6440,
+        271
+      ],
+      "size": [
+        339.1302185058594,
+        591.9234008789062
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            258,
+            259,
+            260
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "37216672.png",
+        "image"
+      ]
+    },
+    {
+      "id": 90,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        -5370,
+        323
+      ],
+      "size": [
+        315,
+        146
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 223
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 259
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 158,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            261
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ]
+    },
+    {
+      "id": 112,
+      "type": "AddText",
+      "pos": [
+        -5876,
+        141
+      ],
+      "size": [
+        405.8782958984375,
+        292
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 258
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            223
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AddText"
+      },
+      "widgets_values": [
+        "Test",
+        236,
+        224,
+        463,
+        "Custom",
+        "#eb34bd",
+        0,
+        0,
+        "#000000",
+        "/content/ComfyUI/models/fonts/BIG JOHN.otf"
+      ]
+    },
+    {
+      "id": 145,
+      "type": "PreviewImage",
+      "pos": [
+        -4989,
+        197
+      ],
+      "size": [
+        509.0576171875,
+        769.8521118164062
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 261
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    }
+  ],
+  "links": [
+    [
+      124,
+      75,
+      0,
+      76,
+      0,
+      "BiRefNetMODEL"
+    ],
+    [
+      158,
+      76,
+      1,
+      90,
+      2,
+      "MASK"
+    ],
+    [
+      223,
+      112,
+      0,
+      90,
+      0,
+      "IMAGE"
+    ],
+    [
+      258,
+      144,
+      0,
+      112,
+      0,
+      "IMAGE"
+    ],
+    [
+      259,
+      144,
+      0,
+      90,
+      1,
+      "IMAGE"
+    ],
+    [
+      260,
+      144,
+      0,
+      76,
+      1,
+      "IMAGE"
+    ],
+    [
+      261,
+      90,
+      0,
+      145,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.0834705943388598,
+      "offset": [
+        6613.5923973753315,
+        18.09727528192384
+      ]
+    }
+  },
+  "version": 0.4
+}

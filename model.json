@@ -1,0 +1,13 @@
+{
+    "input_image_check": "https://files.catbox.moe/flj6kn.png",
+    "text": "Test",
+    "x": 230,
+    "y": 91,
+    "font_size": 223,
+    "font_family": "Custom",
+    "font_color": "#eb34bd",
+    "font_shadow_x": 0,
+    "font_shadow_y": 0,
+    "shadow_color": "#000000",
+    "custom_font_path": "https://huggingface.co/camenduru/Fonts/resolve/main/BIG_JOHN.otf"
+}

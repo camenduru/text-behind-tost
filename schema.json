@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+    "type": "object",
+    "properties": {
+      "readme": {
+        "type": "string",
+        "title": "Bilateral Reference for High-Resolution Dichotomous Image Segmentation",
+        "author": "Peng Zheng, Dehong Gao, Deng-Ping Fan, Li Liu, Jorma Laaksonen, Wanli Ouyang, Nicu Sebe",
+        "paper": "https://arxiv.org/abs/2401.03407",
+        "code": "https://github.com/ZhengPeng7/BiRefNet",
+        "page": "https://www.birefnet.top/",
+        "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/text-behind-image.ipynb",
+        "tags": [
+          "Image to Image"
+        ],
+        "widget": "readme"
+      },
+      "upload1": {
+        "type": "string",
+        "widget": "upload",
+        "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+        "property": "input_image_check"
+      },
+      "input_image_check": {
+        "type": "string",
+        "description": "Input Image URL",
+        "widget": "textarea"
+      },
+      "text": {
+        "type": "string",
+        "description": "Text",
+        "widget": "textarea"
+      },
+      "x": {
+        "type": "integer",
+        "description": "x"
+      },
+      "y": {
+        "type": "integer",
+        "description": "y"
+      },
+      "font_size": {
+        "type": "integer",
+        "description": "Font Size"
+      },
+      "font_family": {
+        "type": "string",
+        "description": "Font Family",
+        "widget": "hidden"
+      },
+      "font_color": {
+        "type": "string",
+        "description": "Font Color"
+      },
+      "font_shadow_x": {
+        "type": "integer",
+        "description": "Font Shadow X"
+      },
+      "font_shadow_y": {
+        "type": "integer",
+        "description": "Font Shadow Y"
+      },
+      "shadow_color": {
+        "type": "string",
+        "description": "Shadow Color"
+      },
+      "upload2": {
+        "type": "string",
+        "widget": "upload",
+        "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+        "property": "custom_font_path"
+      },
+      "custom_font_path": {
+        "type": "string",
+        "description": "Custom Font URL",
+        "widget": "textarea"
+      },
+      "example": {
+        "type": "string",
+        "image1": "https://fakeimg.pl/1000x360/282828/eae0d0/?text=input#.png",
+        "image2": "https://files.catbox.moe/flj6kn.png",
+        "image3": "https://fakeimg.pl/1000x360/282828/eae0d0/?text=output#.png",
+        "image4": "https://files.catbox.moe/8xoh1d.png",
+        "widget": "example"
+      }
+    },
+    "buttons": [
+      {
+        "id": "enter",
+        "label": "🥪 Enter"
+      }
+    ]
+  }
