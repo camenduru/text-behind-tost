@@ -24,5 +24,9 @@ https://www.birefnet.top/
 ![flj6kn](https://github.com/user-attachments/assets/71ada268-55d4-440b-894a-ad30d6d79744)
 ![8xoh1d](https://github.com/user-attachments/assets/70fe0b92-61eb-4a9c-9e5d-b6708a323940)
 
+https://github.com/user-attachments/assets/cac7cb4a-b5b8-4a0c-b02c-0084b81eab13
+
+https://github.com/user-attachments/assets/4e8c5fe3-0906-43fb-a377-defc9b1037c4
+
 ### 🏢 Sponsor
 [https://runpod.io](https://runpod.io?ref=iqi9iy8y)
