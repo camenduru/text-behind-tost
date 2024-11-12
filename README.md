@@ -21,6 +21,8 @@ https://arxiv.org/abs/2401.03407
 https://www.birefnet.top/
 
 ### 🖼 Output
+![Screenshot 2024-11-12 134304](https://github.com/user-attachments/assets/9969dd10-38a8-4cf2-a6c7-5b11f074b9b4)
+
 ![flj6kn](https://github.com/user-attachments/assets/71ada268-55d4-440b-894a-ad30d6d79744)
 ![8xoh1d](https://github.com/user-attachments/assets/70fe0b92-61eb-4a9c-9e5d-b6708a323940)
 
